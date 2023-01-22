@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ReactCardFlip from "react-card-flip";
 import "./App.css";
 
 const angles = [
@@ -234,17 +235,22 @@ function App() {
 
 const Trig = ({ func, angle, answer, showingAnswer }) => {
   return (
-    <div>
-      <h1>
-        {showingAnswer ? (
+    <ReactCardFlip
+      flipSpeedBackToFront={0.1}
+      flipSpeedFrontToBack={0.1}
+      isFlipped={!showingAnswer}
+    >
+      <div className="container">
+        <h1>
           <Fraction fraction={answer} />
-        ) : (
-          <>
-            {func} <Fraction fraction={angle} />
-          </>
-        )}
-      </h1>
-    </div>
+        </h1>
+      </div>
+      <div className="container">
+        <h1>
+          {func} <Fraction fraction={angle} />
+        </h1>
+      </div>
+    </ReactCardFlip>
   );
 };
 

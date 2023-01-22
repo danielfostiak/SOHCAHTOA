@@ -17,4 +17,31 @@ body {
 button {
   background-color: bisque;
   border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.1rem black;
+}
+
+button:active {
+  box-shadow: 0.2rem 0.1rem black;
+  transform: translateY(0.1rem) translateX(0.2rem);
+}
+
+h1 {
+  width: 10rem;
+  height: 4rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 3px solid black;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  background-color: lightskyblue;
+}
+
+sub,
+sup {
+  background-color: lightskyblue;
+}
+
+.moveaway {
+  transition: transform 1s;
 }
