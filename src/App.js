@@ -198,7 +198,7 @@ const initialTrigFunc = trigFunctions[Math.floor(Math.random() * 6)];
 function App() {
   const [angleIdx, setAngleIdx] = useState(initialAngleIdx);
   const [trigFunc, setTrigFunc] = useState(initialTrigFunc);
-  const [usingDegrees, setUsingDegrees] = useState(true);
+  const [usingDegrees, setUsingDegrees] = useState(false);
   const [showingAnswer, setShowingAnswer] = useState(false);
 
   const angle = angles[angleIdx][usingDegrees ? 0 : 1];
@@ -216,6 +216,7 @@ function App() {
 
   return (
     <div className="App">
+      <h2>Trig values you should know :)</h2>
       <button onClick={handleChange}>
         {usingDegrees ? "Switch to radians" : "Switch to degrees"}
       </button>
